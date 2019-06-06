@@ -1,0 +1,18 @@
+Source: opx-nas-multicast
+Section: net
+Priority: optional
+Maintainer: Dell EMC <ops-dev@lists.openswitch.net>
+Build-Depends: debhelper (>= 9), dh-autoreconf, dh-systemd, autotools-dev, libopx-base-model-dev, libopx-common-dev, libopx-logging-dev, libopx-cps-dev, libopx-nas-common-dev, opx-ndi-api-dev, libopx-nas-ndi-dev
+Standards-Version: 3.9.3
+Vcs-Browser: https://github.com/open-switch/opx-nas-multicast
+Vcs-Git: https://github.com/open-switch/opx-nas-multicast.git
+
+Package: libopx-nas-multicast1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopx-common1, libopx-logging1, libopx-nas-common1, libopx-nas-ndi1, libopx-cps1
+Description: This package contains base multicast functionality for the Openswitch software.
+
+Package: libopx-nas-multicast-dev
+Architecture: any
+Depends: ${misc:Depends}, libopx-nas-multicast1 (= ${binary:Version}), libopx-base-model-dev, libopx-common-dev, libopx-logging-dev, libopx-nas-common-dev, opx-ndi-api-dev, libopx-nas-ndi-dev, libopx-cps-dev
+Description: This package contains base multicast functionality for the Openswitch software.

@@ -1,0 +1,20 @@
+#!/bin/bash -e
+./nas_mc_l3_route_db_ut
+
+#
+# Note to Developers:
+#
+# Before submitting a pull request for changes in the nas-multicast
+# repo, uncomment the following lines for L3 Multicast CPS UT
+# execution and execute this script. After verifying passing results,
+# re-comment the lines before submitting the pull request.
+#
+# L3 Multicast CPS UT Execution:
+#
+# ./nas_mc_l3_cps_ut af ipv4
+# ./nas_mc_l3_cps_ut af ipv6 skip-pre-cfg
+# ./nas_mc_l3_cps_ut vrf-name test_vrf_1
+# ./nas_mc_l3_cps_ut vrf-name test_vrf_1 af ipv6 skip-pre-cfg
+# ./nas_mc_l3_cps_ut vrf-name test_vrf_1 clean-up
+
+exit 0
