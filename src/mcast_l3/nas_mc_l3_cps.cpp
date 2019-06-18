@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2018 Dell Inc.
+* Copyright (c) 2019 Dell Inc.
 *
 * Licensed under the Apache License, Version 2.0 (the "License"); you may
 * not use this file except in compliance with the License. You may obtain
@@ -651,7 +651,7 @@ static cps_api_return_code_t _global_mcast_status_get (cps_api_get_params_t *par
     bool                  vrf_name_valid, af_valid;
     cps_api_qualifier_t   qual;
     std::string           vrf_name;
-    BASE_CMN_AF_TYPE_t    af;
+    BASE_CMN_AF_TYPE_t    af = (BASE_CMN_AF_TYPE_t)0;
 
     vrf_name_valid = af_valid = false;
 
@@ -822,7 +822,7 @@ cps_api_return_code_t _intf_pim_status_get (cps_api_get_params_t *param, cps_api
     bool                  vrf_name_valid, af_valid, ifname_valid;
     cps_api_qualifier_t   qual;
     std::string           vrf_name, ifname;
-    BASE_CMN_AF_TYPE_t    af;
+    BASE_CMN_AF_TYPE_t    af = (BASE_CMN_AF_TYPE_t)0;
     hal_vrf_id_t          vrfid = 0;
 
     vrf_name_valid = af_valid = ifname_valid = false;
